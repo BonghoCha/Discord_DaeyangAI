@@ -15,6 +15,10 @@ client.on('messageCreate', (message) => {
 })
 ```
 
+#### Git ignore 정책
+NodeModule 포함을 시키지 않기위해 아래의 정책을 추가함.
+https://github.com/github/gitignore/blob/main/Node.gitignore
+
 
 
 
