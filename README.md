@@ -20,8 +20,12 @@ NodeModule 포함을 시키지 않기위해 아래의 정책을 추가함.
 https://github.com/github/gitignore/blob/main/Node.gitignore
 
 
+#### 대양이 토큰 사용법
+1. .env 파일 생성
+2. TOKEN 변수 생성
+3. 공유드린 token을 할당
 
-
+![image](https://user-images.githubusercontent.com/37327313/162112579-71cf8da5-0cc9-45af-8e55-1a361ed16950.png)
 
 # 참조 
 

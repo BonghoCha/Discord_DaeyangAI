@@ -20,8 +20,8 @@ var reply_string = ['왜불러', '왜', '응?', '나를 찾느냐', '와이']
 var recommend_meal = ['치킨', '피자', '닭강정', '안 먹는건 어때?']
 
 client.on('messageCreate', (message) => {
-    if (message.content === '대양아') {
-        const rand = Math.floor(Math.random() * 5);
+    if (message.content === '대양아') {                
+        const rand = Math.floor(Math.random() * reply_string.length);
 
         message.reply({
             content: reply_string[rand],
