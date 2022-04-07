@@ -29,6 +29,12 @@ https://github.com/github/gitignore/blob/main/Node.gitignore
 
 # 참조 
 
+# 2022 04 07
+#### 대양이 실행 방법
+```ts
+ts-node index.ts
+```
+
 ##### discord.js
 https://discord.js.org/#/docs/discord.js/stable/general/welcome
 
