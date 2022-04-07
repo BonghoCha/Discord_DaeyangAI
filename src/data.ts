@@ -2,7 +2,7 @@
 // -
 
 // 대양이 불렀을때
-var reply_string = [
+export const reply_string = [
     '왜불러', 
     '왜', 
     '응?', 
@@ -12,7 +12,7 @@ var reply_string = [
 ]
 
 // 식사 메뉴 추천 리스트
-var recommend_meal = [
+export const recommend_meal = [
     '치킨',
     '피자',
     '닭강정',

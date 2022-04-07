@@ -1,5 +1,6 @@
 import DiscordJS, { Intents } from 'discord.js'
 import dotenv from 'dotenv'
+import {recommend_meal, reply_string} from './src/data'
 
 dotenv.config()
 
