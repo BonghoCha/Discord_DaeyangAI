@@ -14,20 +14,10 @@ export const generateTier = (tier: number) => {
 
     var result = ""
 
-    if (num == 0) {
-        result += "Bronze "
-    } else if (num == 1) {
-        result += "Silver "
-    } else if (num == 2) {
-        result += "Gold "
-    } else if (num == 3) {
-        result += "Platinum "
-    } else if (num == 4) {
-        result += "Diamond "
-    } else if (num === 5) {
-        result += "Ruby "
-    }
-
+    // num 값에 따라 표현할 수 있는 티어 리스트
+    var resultList = ["Bronze", "Silver", "Gold", "Platinum", "Diamond", "Ruby"];
+    
+    result = resultList[num] + " ";
     result += mod === 0 ? `${1}` : `${5 - mod + 1}`
 
     return result
