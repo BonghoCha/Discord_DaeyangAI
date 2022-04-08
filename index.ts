@@ -42,7 +42,7 @@ client.on('messageCreate', async (message) => {
         })
     }
     // 백준 랭크
-    else if (message.content.startsWith('/solved')) {
+    else if (message.content.startsWith('!solved')) {
         const userID = message.content.split(' ')[1]
 
         message.reply({
