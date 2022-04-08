@@ -1,6 +1,8 @@
-import DiscordJS, { Intents } from 'discord.js'
+import DiscordJS, { Intents, Message } from 'discord.js'
+import REST from '@discordjs/rest'
 import dotenv from 'dotenv'
-import {recommend_meal, reply_string} from './src/data'
+import { recommend_meal, reply_string } from './src/data'
+import { fetchSolvedInfo } from './src/model'
 
 dotenv.config()
 
@@ -8,6 +10,7 @@ const client = new DiscordJS.Client({
     intents: [
         Intents.FLAGS.GUILDS,
         Intents.FLAGS.GUILD_MESSAGES
+        // ,Intents.FLAGS.GUILD_PRESENCES
     ]
 })
 
@@ -15,9 +18,9 @@ client.on('ready', () => {
     console.log("대양이 시동 완료!");
 })
 
-client.on('messageCreate', (message) => {
+client.on('messageCreate', async (message) => {
     // 대양이 불렀을때
-    if (message.content === '대양아') {                
+    if (message.content === '대양아') {
         const rand = Math.floor(Math.random() * reply_string.length);
 
         message.reply({
@@ -37,6 +40,15 @@ client.on('messageCreate', (message) => {
         message.reply({
             content: recommend_meal[randomIndex]
         })
+    }
+    // 백준 랭크
+    else if (message.content.startsWith('!solved')) {
+        const userID = message.content.split(' ')[1]
+
+        message.reply({
+            content: await fetchSolvedInfo(userID)
+        })
+
     }
 })
 
