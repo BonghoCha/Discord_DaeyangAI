@@ -31,13 +31,7 @@ client.on('messageCreate', async (message) => {
 
         if (firstL === "!") {
             // 식사 메뉴 추천
-            if (
-                message.content.includes('밥 추천')
-                || message.content.includes('점심 추천')
-                || message.content.includes('저녁 추천')
-                || message.content.includes('메뉴 추천')
-                || message.content.includes('뭐먹지')
-            ) {
+            if (message.content.includes('밥추천') || message.content.includes('메뉴추천')) {
                 const randomIndex = Math.floor(Math.random() * recommend_meal.length);
 
                 message.reply({
